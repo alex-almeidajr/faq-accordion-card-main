@@ -1,4 +1,4 @@
-# Frontend Mentor - Challenge 02
+# Frontend Mentor - Faq accordion card
 
 
 ## Display type
