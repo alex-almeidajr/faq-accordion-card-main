@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="images">
+        <img class="img-woman" src="/images/illustration-woman-online-desktop.svg" alt="quadro">
+        <img class='box' src="/images/illustration-box-desktop.svg" alt="box">
+      </div>
+      <div class="faq">
+          <div class="faq-titulo">
+            <h1>FAQ</h1>
+          </div>
+          <div class="question-container">
+            <button class="question" onclick={showAnswer(0)}> 
+              How many team members can I invite?
+            </button>  
+            <button class="seta"></button>
+                
+                <!-- <img class="arrow" src="/images/icon-arrow-down.svg" alt="close"> -->
+          </div>
+            <div class="answer">
+              <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="question-container">
+            <div class="question show" onclick={showAnswer(1)}>
+              <p>What is the maximum file upload size?</p>
+              <div class="align-arrow">
+                <img src="/images/icon-arrow-down.svg" alt="close">
+              </div>
+            </div>
+            <div class="answer">
+              <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
+            <div class="line"></div>
+          </div>
+
+          <div class="question-container">
+            <div class="question" onclick={showAnswer(2)}>
+              <p>How do I reset my password?</p>
+              <div class="align-arrow">
+                <img src="/images/icon-arrow-down.svg" alt="close">
+              </div>  
+            </div>
+            <div class="answer">
+              <p>Click “Forgot password” from the login page or “Change password” from your profile page. 
+                A reset link will be emailed to you.</p>
+            </div>
+            <div class="line"></div>
+          </div> 
+          
+          <div class="question-container">
+            <div class="question" onclick={showAnswer(3)}>
+              <p>Can I cancel my subscription?</p>
+              <div class="align-arrow collapse show">
+                <img src="/images/icon-arrow-down.svg" alt="close">
+              </div>  
+            </div>
+            <div class="answer">
+              <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </div>
+            <div class="line"></div>
+          </div>  
+
+          <div class="question-container">
+            <div class="question" onclick={showAnswer(4)}>
+              <p>Do you provide additional support?</p>
+              <div class="align-arrow">
+                <img src="/images/icon-arrow-down.svg" alt="close">
+              </div>  
+            </div>
+            <div class="answer">
+              <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
+            <div class="line"></div>
+          </div>
+      </div>      
+    </div>
+  </body>
+  <script>
+    function showAnswer(el) {
+      const arr = [...document.querySelectorAll('.container .answer')]
+      if (arr.filter(el => el.style.display === 'block') > 0) {
+        arr.map(el => el.style.display = 'none')
+      }
+      if (arr[el].style.display) {
+        if (arr[el].style.display === 'none') {
+          arr[el].style.display = 'block'
+        } else {
+          arr[el].style.display = 'none'
+        }
+      } else {
+        arr[el].style.display = 'block'
+      }
+    }
+  </script>
+</html>

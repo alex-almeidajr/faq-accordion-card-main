@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --text-faq: hsl(238, 29%, 16%);
+    --text-title: hsl(237, 12%, 33%);
+    --text-body: hsl(240, 6%, 50%);
+    --text-hover: hsl(14, 88%, 65%);
+    --border-color: hsl(240, 5%, 91%);
+    --line-color: hsl(0deg 0% 24% / 10%);
+    --card-color: #ffff;
+    --gradient-color01: hsl(273, 75%, 66%);
+    --gradient-color02: hsl(240, 73%, 65%);
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;  
+    height: 100vh;  
+    background: linear-gradient(var(--gradient-color01), var(--gradient-color02));  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .images {
+    background-image: url('/images/bg-pattern-desktop.svg');
+    background-position: top;
+    background-position-y: -193px;
+    background-position-x: -1012px;
+    background-size: 204%;
+    width: 41%;
+}
+
+  .img-woman {
+    height: 50vh;
+    position: relative; 
+    margin-top: 30px;
+    object-fit: cover;
+    object-position: -55px 0px;
+}
+
+  .box {
+    display: block;
+    margin-bottom: 100px;
+    position: absolute;
+    bottom: 85px;
+    right: 948px;
+    height:25%;
+    width: auto;
+}
+
+  .container {
+      display: flex;
+      flex-direction: row;
+      width: 800px;
+      height: 65vh;
+      background-color: white;
+      border-radius: 15px;      
+  }
+
+  .faq {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    width: 450px;
+    padding: 30px;
+  }
+  .faq-titulo {
+    margin: 10px 0 15px 0;
+  }
+
+  .question-container {
+    display: flex;
+    align-content: space-between;
+    width: 400px;
+    margin: 0;
+  }
+
+  .question {
+    margin: 20px 0 10px 0;
+  }
+
+  .question p {
+    color: var(--text-title);
+    width: 280px;
+    cursor: pointer;
+  }
+
+  .question :hover {
+    color: var(--text-hover);
+  }
+
+  .line {
+    width: 300px;
+    height: 0;
+    border: 0.1px solid var(--line-color);
+    margin-top: 10px;
+}
+
+  .answer p {
+    color: var(--text-body);
+    width: 320px;
+  }
+
+  .answer {
+    display: none;
+  }
+
+  .seta {
+    background-image: url("/images/icon-arrow-down.svg");
+    height: 10px;
+    width: 15px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+  }
+
+  
