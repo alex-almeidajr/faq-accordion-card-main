@@ -40,7 +40,7 @@
   .img-woman {
     height: 50vh;
     position: relative; 
-    margin-top: 30px;
+    margin-top: 40px;
     object-fit: cover;
     object-position: -55px 0px;
 }
@@ -49,7 +49,7 @@
     display: block;
     margin-bottom: 100px;
     position: absolute;
-    bottom: 85px;
+    bottom: 75px;
     right: 948px;
     height:25%;
     width: auto;
@@ -67,7 +67,7 @@
   .faq {
     display: flex;
     flex-direction: column;
-    margin-left: 80px;
+    margin-left: 50px;
     width: 450px;
     padding: 30px;
   }
@@ -76,14 +76,14 @@
   }
 
   .question-container {
-    display: flex;
-    align-content: space-between;
     width: 400px;
     margin: 0;
   }
 
   .question {
     margin: 20px 0 10px 0;
+    display: flex;
+    align-content: space-between;
   }
 
   .question p {
@@ -97,7 +97,7 @@
   }
 
   .line {
-    width: 300px;
+    width: 320px;
     height: 0;
     border: 0.1px solid var(--line-color);
     margin-top: 10px;
@@ -112,15 +112,14 @@
     display: none;
   }
 
-  .seta {
-    background-image: url("/images/icon-arrow-down.svg");
+  .align-arrow {
     height: 10px;
     width: 15px;
-    background-repeat: no-repeat;
-    border: none;
-    background-color: transparent;
     cursor: pointer;
-    
+    margin-left: 30px    
   }
 
-  
+  .arrow {
+    height: 7px;
+    width: 10px;
+}

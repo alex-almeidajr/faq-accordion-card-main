@@ -18,13 +18,12 @@
             <h1>FAQ</h1>
           </div>
           <div class="question-container">
-            <button class="question" onclick={showAnswer(0)}> 
-              How many team members can I invite?
-            </button>  
-            <button class="seta"></button>
-                
-                <!-- <img class="arrow" src="/images/icon-arrow-down.svg" alt="close"> -->
-          </div>
+             <div class="question" onclick={showAnswer(0)}> 
+              <p>How many team members can I invite?</p>  
+              <div class="align-arrow">
+                <img src="/images/icon-arrow-down.svg" alt="close">
+              </div>
+            </div>
             <div class="answer">
               <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
               team members for the Premium plan.</p>
@@ -32,7 +31,7 @@
             <div class="line"></div>
           </div>
           <div class="question-container">
-            <div class="question show" onclick={showAnswer(1)}>
+            <div class="question" onclick={showAnswer(1)}>
               <p>What is the maximum file upload size?</p>
               <div class="align-arrow">
                 <img src="/images/icon-arrow-down.svg" alt="close">
@@ -61,7 +60,7 @@
           <div class="question-container">
             <div class="question" onclick={showAnswer(3)}>
               <p>Can I cancel my subscription?</p>
-              <div class="align-arrow collapse show">
+              <div class="align-arrow">
                 <img src="/images/icon-arrow-down.svg" alt="close">
               </div>  
             </div>
@@ -89,17 +88,27 @@
   <script>
     function showAnswer(el) {
       const arr = [...document.querySelectorAll('.container .answer')]
+      const seta = [...document.querySelectorAll('.align-arrow')]
+      const p = [...document.querySelectorAll('.question p')]
+
       if (arr.filter(el => el.style.display === 'block') > 0) {
         arr.map(el => el.style.display = 'none')
       }
       if (arr[el].style.display) {
         if (arr[el].style.display === 'none') {
-          arr[el].style.display = 'block'
+          arr[el].style.display = 'block';
+          seta[el].style.transform = 'rotatex(0.5turn)';
+          p[el].style.fontWeight = 'bold';
+
         } else {
-          arr[el].style.display = 'none'
+          arr[el].style.display = 'none';
+          seta[el].style.transform = 'rotate(0deg)';
+          p[el].style.fontWeight = 'normal';          
         }
       } else {
-        arr[el].style.display = 'block'
+        arr[el].style.display = 'block';
+        seta[el].style.transform = 'rotatex(0.5turn)';
+        p[el].style.fontWeight = 'bold';
       }
     }
   </script>
