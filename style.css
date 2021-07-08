@@ -47,12 +47,12 @@
 }
 
   .box {
-    display: block;
+    display: flex;
     margin-bottom: 100px;
-    position: absolute;
-    bottom: 75px;
-    right: 948px;
-    height:25%;
+    position: relative;
+    bottom: 165px;
+    right: 66px;
+    height:35%;
     width: auto;
 }
 
