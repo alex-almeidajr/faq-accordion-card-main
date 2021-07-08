@@ -11,6 +11,7 @@
     --gradient-color01: hsl(273, 75%, 66%);
     --gradient-color02: hsl(240, 73%, 65%);
   }
+@media only screen and (max-device-width: 1440px) {
 
   * {
     padding: 0;
@@ -122,4 +123,5 @@
   .arrow {
     height: 7px;
     width: 10px;
+  }
 }
